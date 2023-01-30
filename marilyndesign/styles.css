@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+header {
+    background: radial-gradient(black, black);
+    padding: 20px;
+}
+header h1 {
+    font-size: 2.5em;
+}
+header h4 {
+    text-align: center;
+}
+header ul {
+    display: inline;
+    list-style-type: none;
+    
+}
+header li {
+    
+    
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+h1 a {
+    color: goldenrod;
+    
+}
+li a {
+    text-decoration: none;
+
+    
+    
+    
+}
+li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+
+/* figcaption {
+    padding: 20px;
+    background: darkred;
+    color: white;
+    width: 80px;
+    margin-left: 300px;
+    margin-top: -5px;
+    border-radius: 10px;
+} */
+.border-img {
+    border: solid darkred 20px;
+    padding: 40px;
+}
+.border-img1 {
+    border: solid darkred 20px;
+    padding: 30px;
+}
+.price a,
+.price1 a,
+.price2 a, 
+.price3 a,
+.price4 a ,
+.price5 a{
+    color: gray;
+}
+/* button {
+    background:black;
+    color: gray;
+    border-radius: 5px;
+    padding: 8px 20px;
+    font-weight:900;
+    
+} */
+button:hover {
+    background-color: lightskyblue;
+    border: lightskyblue;
+}
+
+figure {
+    display: inline-block;
+    text-align: center;
+    width: 40%;
+    margin-right: 0;
+    margin-left: 0;
+}
+figcaption a {
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 1.5em;
+    color:  darkred;
+}
+footer {
+    text-align: center;
+}
+footer a {
+    color: silver;
+    text-decoration: none;
+    font-size: 12px;
+}
