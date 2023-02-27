@@ -4,11 +4,24 @@
     font-family: 'Raleway', sans-serif;
     font-family: 'Source Sans Pro', sans-serif;
 }
-@media only screen and (max-width: 600px) {
-    body {
-      font-size: 14px;
-    }
-  }
+@media (min-width: 668px) 
+{  
+ 	html, body { margin: 72px;} 
+	h1 { font-size: 60px;} 
+	p { font-size: 30px; } 
+} 
+@media (max-width: 667px) 
+{ 
+	html, body { margin: 36px;} 
+	h1 { font-size: 36px;} 
+	p { font-size: 24px; } 
+} 
+@media (max-width: 375px) 
+{ 
+	html, body { margin: 12px;} 
+	h1 { font-size: 24px; } 
+	p { font-size: 16px;} 
+} 
   
 
 header {

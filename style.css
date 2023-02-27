@@ -2,13 +2,25 @@ body {
     margin: 0;
     padding: 0;
 }
-@media only screen and (max-width: 600px) {
-    body {
-      font-size: 14px;
-    }
-  }
+@media (min-width: 668px) 
+{  
+ 	html, body { margin: 72px; background-color: #000; } 
+	h1 { font-size: 60px; color: #FFF; } 
+	p { font-size: 30px; color: #F00; } 
+} 
+@media (max-width: 667px) 
+{ 
+	html, body { margin: 36px; background-color: #F00; } 
+	h1 { font-size: 36px; color: #000; } 
+	p { font-size: 24px; color: #FFF; } 
+} 
+@media (max-width: 375px) 
+{ 
+	html, body { margin: 12px; background-color: #FFF; } 
+	h1 { font-size: 24px; color: #F00; } 
+	p { font-size: 16px; color: #000; } 
+} 
   
-
 header {
     text-align: center;
     background: none;
