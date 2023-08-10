@@ -1,3 +1,7 @@
+body{
+    margin: 0;
+    border: 0;
+}
 * {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -51,6 +55,22 @@
     footer p {
         font-size: 10px;
     }
+
+    .women1 img{
+        width:55%;
+        height: 12vh;
+    }
+    .women2 img {
+        width: 55%;
+        margin-top: 20px;
+    }
+    
+    .women3 img {
+        height: 8vh;
+    }
+    .womenVid video{
+        width: 65%;
+    }
 } 
   
 
@@ -88,15 +108,35 @@ li {
 }
 
 
-/* figcaption {
-    padding: 20px;
-    background: darkred;
-    color: white;
-    width: 80px;
-    margin-left: 300px;
-    margin-top: -5px;
-    border-radius: 10px;
-} */
+.figure1 img {
+    width:50%;
+    margin-top: 20px ;
+}
+.figure2 img {
+    width:55%;
+    margin-top: 40px;
+}
+
+.women1 img{
+    width:55%;
+    height: 52vh;
+    margin-top: 20px;
+}
+.women2 img {
+    width: 55%;
+    margin-top: 40px;
+}
+
+.women3 img {
+    height: 32vh;
+    width: 35%;
+    margin-top: 40px;
+}
+.womenVid video{
+    width: 65%;
+}
+
+
 .border-img {
     border: solid darkred 20px;
     padding: 40px;
@@ -140,11 +180,29 @@ figcaption a {
     font-size: 1.5em;
     color:  darkred;
 }
+
+.men-pic1 img {
+    width: 60%;
+}
+
+.men-pic2 img {
+    width: 60%;
+}
 footer {
     text-align: center;
+    font-size: 14px;
+}
+footer p {
+    font-size: 12px;
 }
 footer a {
     color: silver;
     text-decoration: none;
     font-size: 12px;
+}
+
+.nav-space {
+    margin-top: 60px;
+    margin-bottom: -20px;
+
 }
