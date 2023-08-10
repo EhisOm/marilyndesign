@@ -6,7 +6,7 @@
 }
 @media (min-width: 668px) 
 {  
- 	html, body { margin: 72px;} 
+ 	html, body { margin: 72px; margin-top: 0;} 
 	h1 { font-size: 60px;} 
 	p { font-size: 30px; } 
 } 
@@ -21,6 +21,36 @@
 	html, body { margin: 12px;} 
 	h1 { font-size: 24px; } 
 	p { font-size: 16px;} 
+
+    #header-logo {
+        font-size: 23px;
+        margin-bottom: 25px;
+    }
+    #header-tog li a {
+        font-size: 8px;
+        
+    }
+
+
+    figure {
+        display: inline-block;
+        text-align: center;
+        width: 40%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    
+    .border-img, figcaption a {
+        font-size: 8px;
+        color:  darkred;
+    }
+    
+    footer a {
+        font-size: 10px;
+    }
+    footer p {
+        font-size: 10px;
+    }
 } 
   
 
@@ -103,6 +133,7 @@ figure {
     margin-right: 0;
     margin-left: 0;
 }
+
 figcaption a {
     text-decoration: none;
     font-weight: bolder;

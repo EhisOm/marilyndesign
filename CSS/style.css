@@ -1,0 +1,314 @@
+body {
+    padding: 0;
+    margin: 0; 
+    
+} 
+
+@media only screen and (min-width: 768px) 
+{  
+ 	body { margin: 42px; background-color: darkred; } 
+	h1 { font-size: 60px; color: #FFF; } 
+	p { font-size: 30px; color: darkred; } 
+    li a {
+        display: inline-block;
+    }
+} 
+@media only screen and (max-width: 613px) { 
+	body { margin: 36px; background-color: darkred; } 
+	h1,a { font-size: 12px; color: black; } 
+	.main-p { font-size: 10px; color: darkred; } 
+} 
+
+@media only screen and  (max-width: 390px) { 
+	body { margin: 22px; background-color: darkred; } 
+	h1 { font-size: 12px; color: #FFF; } 
+	p { font-size: 12px; color: darkred; }
+    
+    body #head-logo .head-img {
+        width: 250px;
+    }
+    #head-logo-mobile img {
+        width: 250px;
+    }
+	h1 { 
+        font-size: 12px; 
+        color: #FFF; 
+    } 
+	
+    ul li a {
+        display: inline-block;
+        margin: 5px;
+        font-size: 8px;
+    }
+
+    body .img-div {
+        margin: 0%;
+        background: url("../images/whiclot.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height:200px;
+        border:  solid 1px whitesmoke;
+       
+    }
+    #main-p { font-size: 10px; }
+
+    .address1 {
+    font-size: 12px;
+    }
+   
+    body footer p {
+    word-spacing: 5px;
+    color: silver;
+    font-size: 8px;
+    }
+
+    #form-reg {
+        width: 230px;
+        margin: 20vh auto 0 auto;
+        padding: 20px;
+        background: whitesmoke ;
+        border-radius: 4px;
+        font-size: 12px;
+        margin-bottom: 150px;
+    }
+
+    #form-log {
+        width: 230px;
+        margin: 20vh auto 0 auto;
+        padding: 20px;
+        border-radius: 4px;
+        font-size: 12px;
+        margin-bottom: 150px;
+    }
+
+    body button {
+        width: 50px;
+        height: 4vh;
+        font-size: 7px;
+        margin-top: 35px;
+    }
+
+    body .input-control input {
+        border: 2px solid #f0f0f0;
+        border-radius: 2px;
+        font-size: 7px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    body .input-control #label {
+        border: 2px solid #f0f0f0;
+        border-radius: 2px;
+        font-size: 7px;
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+
+} 
+
+
+
+
+
+
+
+ #head-logo img {
+    width:30%;
+}
+  
+header {
+    text-align: center;
+    background: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform:  color 0.4s linear ;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 20%;
+    background: white;
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    transform: scaleX(0);
+}
+header:hover::before {
+    transform: scaleX(1);
+}
+
+
+header h1 {
+    margin-bottom: -1%;  
+}
+
+    li a {
+        color: silver ;
+        text-decoration: none;
+        margin: 20px;
+    }
+
+li :hover {
+    color: red;
+}
+
+li {
+    display: inline;
+    
+}
+div .main-p {
+    background: white;
+    padding: 80px;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.form-p
+{
+    background: white;
+    padding: 80px;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+form {
+    width: 450px;
+    margin: 20vh auto 0 auto;
+    padding: 20px;
+    background: whitesmoke ;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-bottom: 150px;
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+}
+.input-control #label {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+button {
+    background: red;
+    height: 40px;
+    padding: solid coral 1px;
+    margin-top: 20px;
+}
+
+
+.nav-space {
+    padding: 20px;
+    background:whitesmoke;
+    text-align: center;
+}
+
+.img-div {
+    margin: 0%;
+    background: url("../images/whiclot.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height:600px;
+    border:  solid 1px whitesmoke;
+   
+}
+/* .img-div2 {
+    margin: 0%;
+    background: url("vluclot.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height:500px;
+    border:  solid 1px white;
+    background-position: center center;
+    background-size: 350px;
+} */
+/* .img-div3 {
+    margin: 0%;
+    background: url("redClo.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height:550px;
+    border:  solid 1px white ; 
+    background-position: center center;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    background-size: 250px;
+} */
+/* .img-div4 {
+    margin: 0%;
+    background: url("bluNgrin.jpg");
+    background-repeat: no-repeat;
+    background-size: 250px;
+    width: 100%;
+    height:550px;
+    border:  solid 1px whitesmoke  ; 
+    background-position: center center;
+} */
+.address,
+span {
+    margin: 150px 80px 150px;
+}
+
+.address1,
+span {
+    margin: 80px;
+}
+.red-color {
+    color:red;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+}
+.green-color {
+    color:green;
+}
+.yellow-color {
+    color:teal
+}
+
+section {
+    margin: 10px 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.white-space {
+    margin: 200px;
+}
+
+/* figure figcaption {
+    border-radius: 20px;
+    padding: 3px;
+    color: white;
+    width: 100px;
+    margin-left: 50px;
+} */
+
+
+footer p {
+    word-spacing: 20px;
+    color: silver;
+    font-size: 12px;
+}
+
+footer a {
+    color: grey;
+    text-decoration: none;
+}
