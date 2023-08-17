@@ -8,7 +8,7 @@ body{
     font-family: 'Raleway', sans-serif;
     font-family: 'Source Sans Pro', sans-serif;
 }
-@media (min-width: 668px) 
+/* @media (min-width: 668px)
 {  
  	html, body { margin: 72px; margin-top: 0;} 
 	h1 { font-size: 60px;} 
@@ -19,30 +19,41 @@ body{
 	html, body { margin: 36px;} 
 	h1 { font-size: 36px;} 
 	p { font-size: 24px; } 
-} 
-@media (max-width: 375px) 
+}  */
+
+@media (max-width: 390px), (max-width: 414px), (max-width: 375px), (min-width: 820px), (max-width: 667px)
 { 
 	html, body { margin: 12px;} 
 	h1 { font-size: 24px; } 
 	p { font-size: 16px;} 
 
-    #header-logo {
-        font-size: 23px;
+    #header-logo-women  a{
+        font-size: 55%;
+        margin-bottom: 15%;
+    }
+    /* #header-img-women img {
+        width: 50%;
+    } */
+    #header-logo-h1{
+        font-size: 25px;
         margin-bottom: 25px;
     }
-    #header-tog li a {
-        font-size: 8px;
-        
+    /* #header-logo-men a {
+        font-size: 65%;
+    } */
+    #header-img-men img {
+        width: 50%;
+    }
+    h4 .header-tog a {
+        /* width: 7px; */
+        font-size: 70%;
+    }
+    #header-menu a {
+        /* width: 7px; */
+        font-size: 65%;
     }
 
-
-    figure {
-        display: inline-block;
-        text-align: center;
-        width: 40%;
-        margin-right: 0;
-        margin-left: 0;
-    }
+    
     
     .border-img, figcaption a {
         font-size: 8px;
@@ -56,22 +67,80 @@ body{
         font-size: 10px;
     }
 
-    .women1 img{
-        width:55%;
-        height: 12vh;
+    .women1 a img{
+        width: 100%;
+        height: 21vh;
     }
-    .women2 img {
+    .women2 a img {
+        width: 100%;
+        height: 18vh;
+        margin-top: 20px;
+    }
+    .women4 a img {
+        width: 100%;
+        height: 18vh;
+        margin-top: 30px;
+    }
+    .women5 a img {
+        width: 100%;
+        height: 18vh;
+        margin-top: 30px;
+    }
+    
+    .women3 a img {
+        width: 100%;
+        height: 19vh;
+        margin-top: 20px;
+    }
+    .womenVid a video{
+        width: 100%;
+        height: 25vh;
+    }
+
+    .men-pic1 img {
+        width: 65%;
+        margin-top: 20px;
+    }
+
+    .wmen-pic img{
+        width: 50%;
+        margin-top: 20px;
+    }
+
+    .men-pic2 img {
         width: 55%;
         margin-top: 20px;
     }
-    
-    .women3 img {
-        height: 8vh;
+
+    figcaption {
+        font-size: 8px;
     }
-    .womenVid video{
-        width: 65%;
+
+    .figure1 a img {
+        width: 88%;
+    }
+    .figure2 a img {
+        width: 100%;
+        margin-top: 20px;
     }
 } 
+@media (max-width: 820px) {
+    #header-logo {
+        font-size: 50px;
+        margin-bottom: 25px;
+    }
+    footer a {
+        font-size: 14px;
+    }
+    footer p {
+        font-size: 14px;
+    }
+    #header-tog li a {
+        font-size: 14px;
+        
+    }
+
+}
   
 
 header {
@@ -112,10 +181,10 @@ li {
     width:50%;
     margin-top: 20px ;
 }
-.figure2 img {
+/* .figure2 img {
     width:55%;
     margin-top: 40px;
-}
+} */
 
 .women1 img{
     width:55%;
@@ -181,11 +250,7 @@ figcaption a {
     color:  darkred;
 }
 
-.men-pic1 img {
-    width: 60%;
-}
-
-.men-pic2 img {
+.figure2 img {
     width: 60%;
 }
 footer {

@@ -19,17 +19,17 @@ body {
 	.main-p { font-size: 10px; color: darkred; } 
 } 
 
-@media only screen and  (max-width: 390px) { 
+@media only screen and  (max-width: 390px), (max-width: 414px)
+{ 
 	body { margin: 22px; background-color: darkred; } 
 	h1 { font-size: 12px; color: #FFF; } 
 	p { font-size: 12px; color: darkred; }
     
     body #head-logo .head-img {
         width: 250px;
+        margin-top: -22px;
     }
-    #head-logo-mobile img {
-        width: 250px;
-    }
+    
 	h1 { 
         font-size: 12px; 
         color: #FFF; 
@@ -104,16 +104,39 @@ body {
         margin-bottom: 10px;
     }
 
+    /* section {
+        margin: 20% 10%;
+        margin-left: auto;
+        margin-right: auto;
+    } */
+
 } 
 
+@media only screen and (max-width: 414px), (max-width: 768px) 
+{
+
+  span .space-below {
+        margin-right: -10%;
+    }
+}
+@media only screen and (max-width: 375px), (max-width: 414px), (max-width: 393px) 
+{
+    span .space-below {
+        margin-right: 15%;
+    }
+}
 
 
 
 
+h1 img {
+    width:30%;
+    margin-top: -42px;
+}
 
 
  #head-logo img {
-    width:30%;
+    width:20%;
 }
   
 header {
@@ -147,11 +170,11 @@ header h1 {
     margin-bottom: -1%;  
 }
 
-    li a {
-        color: silver ;
-        text-decoration: none;
-        margin: 20px;
-    }
+li a {
+    color: silver ;
+    text-decoration: none;
+    margin: 20px;
+}
 
 li :hover {
     color: red;
@@ -285,12 +308,15 @@ a {
 }
 
 section {
-    margin: 10px 10px;
+    margin: 8% 8%;
     margin-left: auto;
     margin-right: auto;
 }
 .white-space {
-    margin: 200px;
+    margin-right: 50%;
+}
+.space-below {
+    margin-right: -5%;
 }
 
 /* figure figcaption {
