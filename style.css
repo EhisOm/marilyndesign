@@ -4,22 +4,7 @@ body {
     
 } 
 
-@media only screen and (min-width: 768px) 
-{  
- 	body { margin: 42px; background-color: darkred; } 
-	h1 { font-size: 60px; color: #FFF; } 
-	p { font-size: 30px; color: darkred; } 
-    li a {
-        display: inline-block;
-    }
-} 
-@media only screen and (max-width: 613px) { 
-	body { margin: 36px; background-color: darkred; } 
-	h1,a { font-size: 12px; color: black; } 
-	.main-p { font-size: 10px; color: darkred; } 
-} 
-
-@media only screen and  (max-width: 390px), (max-width: 414px)
+@media (max-width: 980px), (max-width: 1250px)
 { 
 	body { margin: 22px; background-color: darkred; } 
 	h1 { font-size: 12px; color: #FFF; } 
@@ -55,6 +40,10 @@ body {
 
     .address1 {
     font-size: 12px;
+    }
+    span .space-below {
+        margin-right: -120px;
+        font-size: 12px;
     }
    
     body footer p {
@@ -104,29 +93,19 @@ body {
         margin-bottom: 10px;
     }
 
-    /* section {
-        margin: 20% 10%;
-        margin-left: auto;
-        margin-right: auto;
-    } */
-
-} 
-
-@media only screen and (max-width: 414px), (max-width: 768px) 
-{
-
-  span .space-below {
-        margin-right: -10%;
-    }
 }
-@media only screen and (max-width: 375px), (max-width: 414px), (max-width: 393px) 
-{
+
+@media (max-width: 500px){
     span .space-below {
-        margin-right: 15%;
+        font-size: 11px;
     }
 }
-
-
+@media (max-width: 300px){
+    span .space-below {
+        margin-left: 3%;
+        font-size: 11px;
+    }
+}
 
 
 h1 img {
@@ -251,38 +230,7 @@ button {
     border:  solid 1px whitesmoke;
    
 }
-/* .img-div2 {
-    margin: 0%;
-    background: url("vluclot.jpg");
-    background-repeat: no-repeat;
-    width: 100%;
-    height:500px;
-    border:  solid 1px white;
-    background-position: center center;
-    background-size: 350px;
-} */
-/* .img-div3 {
-    margin: 0%;
-    background: url("redClo.jpg");
-    background-repeat: no-repeat;
-    width: 100%;
-    height:550px;
-    border:  solid 1px white ; 
-    background-position: center center;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    background-size: 250px;
-} */
-/* .img-div4 {
-    margin: 0%;
-    background: url("bluNgrin.jpg");
-    background-repeat: no-repeat;
-    background-size: 250px;
-    width: 100%;
-    height:550px;
-    border:  solid 1px whitesmoke  ; 
-    background-position: center center;
-} */
+
 .address,
 span {
     margin: 150px 80px 150px;
@@ -318,15 +266,6 @@ section {
 .space-below {
     margin-right: -5%;
 }
-
-/* figure figcaption {
-    border-radius: 20px;
-    padding: 3px;
-    color: white;
-    width: 100px;
-    margin-left: 50px;
-} */
-
 
 footer p {
     word-spacing: 20px;
