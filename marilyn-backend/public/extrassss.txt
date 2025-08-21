@@ -1,0 +1,7 @@
+<!-- <h1 id="header-img-women" ><a href="index.html"><img src="../images/marilynDesign.jpg" alt=""></a></h1> -->
+
+
+PASTE IN PAGE 137 IF NEEDED
+/* #head-logo-mobile a .head-img {
+    width: 20px;
+} */

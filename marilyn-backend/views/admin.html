@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Panel - Approve Payment</title>
+
+  <!-- Quick Client-Side Admin Check -->
+  <script>
+    const user = JSON.parse(localStorage.getItem('user'));
+    const token = localStorage.getItem('token');
+
+    // Redirect if not logged in or not admin
+    if (!token || !user || user.role !== 'admin') {
+      window.location.href = 'index.html';
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background: #f5f5f5;
+      text-align: center;
+      color: #333;
+    }
+    h1 {
+      margin-bottom: 30px;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      font-size: 1.2rem;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    #statusMessage {
+      margin-top: 20px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #155724;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Admin Panel - Payment Approval</h1>
+  <button id="approveBtn">Approve Payment</button>
+  <div id="statusMessage">Payment Approved!</div>
+
+  <script>
+    const approveBtn = document.getElementById('approveBtn');
+    const statusMessage = document.getElementById('statusMessage');
+
+    approveBtn.addEventListener('click', () => {
+      localStorage.setItem('paymentStatus', 'approved');
+      statusMessage.style.display = 'block';
+    });
+  </script>
+
+  <!-- Load admin-specific functionality last -->
+  <script src="/js/adminLoader.js"></script>
+</body>
+</html>
