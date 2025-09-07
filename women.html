@@ -1,0 +1,184 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>WOMEN</title>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@300;700&family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet" />
+
+<!-- External CSS -->
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+<header>
+  <h1 id="header-logo-men"><a href="index.html">MARILYN <small>DESIGNS</small></a></h1>
+  <span id="menu-toggle">☰</span>
+  <nav id="header-menu">
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">SHOP ▾</a>
+        <div class="dropdown-content">
+          <a href="men.html">Men</a>
+          <a href="women.html" aria-current="page">Women</a>
+          <a href="kids.html">Kids</a>
+        </div>
+      </li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li><a href="cart.html" id="cart-icon">🛒 <span id="cart-count">0</span></a></li>
+      <li class="dropdown" id="accountDropdown" style="display:none;">
+        <a href="#" id="userNameDisplay">My Account ▾</a>
+        <div class="dropdown-content">
+          <a href="profile.html">Profile</a>
+          <a href="cart.html">Orders</a>
+          <a href="#" onclick="signOut()">Sign Out</a>
+        </div>
+      </li>
+      <li id="loginLinks">
+        <a href="login.html">Login</a> | <a href="register.html">Register</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main class="products-grid">
+  <!-- Product 1 -->
+  <figure class="product-card" data-product='{"name":"Knatchbull Cloth","price":21911.99,"images":{"Black":["images/Knatchbullcloth1.png"],"Pink":["images/Knatchbullcloth.png"]},"sizes":["S","M","L","XL"]}'>
+    <div class="main-img-container">
+      <img class="main-img" src="images/Knatchbullcloth1.png" alt="Knatchbull Black">
+    </div>
+    <div class="thumbnail-gallery">
+      <img src="images/Knatchbullcloth1.png" class="selected" alt="Black">
+      <img src="images/Knatchbullcloth.png" alt="Pink">
+    </div>
+    <div class="product-info">
+      <a href="#">Knatchbull Cloth</a>
+      <a href="#">₦21,911.99</a>
+      <label>Color:
+        <select class="color-select">
+          <option value="Black" selected>Black</option>
+          <option value="Pink">Pink</option>
+        </select>
+      </label>
+      <label>Size:
+        <select class="size-select">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+      </label>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </figure>
+
+  <!-- Product 2 -->
+  <figure class="product-card" data-product='{"name":"Senator Mat","price":20000,"images":{"Black":["images/vluclot3.png"],"Blue":["images/vluclot31.png"]},"sizes":["S","M","L","XL"]}'>
+    <div class="main-img-container">
+      <img class="main-img" src="images/vluclot3.png" alt="Senator Black">
+    </div>
+    <div class="thumbnail-gallery">
+      <img src="images/vluclot3.png" class="selected" alt="Black">
+      <img src="images/vluclot31.png" alt="Blue">
+    </div>
+    <div class="product-info">
+      <a href="#">Senator Mat</a>
+      <a href="#">₦20,000</a>
+      <label>Color:
+        <select class="color-select">
+          <option value="Black" selected>Black</option>
+          <option value="Blue">Blue</option>
+        </select>
+      </label>
+      <label>Size:
+        <select class="size-select">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+      </label>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </figure>
+
+  <!-- Product 3 -->
+  <figure class="product-card" data-product='{"name":"Gown","price":30000,"images":{"Cream":["images/crimclot.png"],"Red":["images/redClo.png"]},"sizes":["S","M","L","XL"]}'>
+    <div class="main-img-container">
+      <img class="main-img" src="images/crimclot.png" alt="Gown Cream">
+    </div>
+    <div class="thumbnail-gallery">
+      <img src="images/crimclot.png" class="selected" alt="Cream">
+      <img src="images/redClo.png" alt="Red">
+    </div>
+    <div class="product-info">
+      <a href="#">Gown</a>
+      <a href="#">₦30,000</a>
+      <label>Color:
+        <select class="color-select">
+          <option value="Cream" selected>Cream</option>
+          <option value="Red">Red</option>
+        </select>
+      </label>
+      <label>Size:
+        <select class="size-select">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+      </label>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </figure>
+
+  <!-- Product 4 -->
+  <figure class="product-card" data-product='{"name":"Ankara","price":10000,"images":{"Cream":["images/2piececlothes.png"],"White":["images/trousernvest.png"]},"sizes":["S","M","L","XL"]}'>
+    <div class="main-img-container">
+      <img class="main-img" src="images/2piececlothes.png" alt="Ankara Cream">
+    </div>
+    <div class="thumbnail-gallery">
+      <img src="images/2piececlothes.png" class="selected" alt="Cream">
+      <img src="images/trousernvest.png" alt="White">
+    </div>
+    <div class="product-info">
+      <a href="#">Ankara</a>
+      <a href="#">₦10,000</a>
+      <label>Color:
+        <select class="color-select">
+          <option value="Cream" selected>Cream</option>
+          <option value="White">White</option>
+        </select>
+      </label>
+      <label>Size:
+        <select class="size-select">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+      </label>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </figure>
+</main>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <span id="close-lightbox">&times;</span>
+  <img id="lightbox-img" src="" alt="">
+  <span id="prev">&#10094;</span>
+  <span id="next">&#10095;</span>
+</div>
+
+<footer>
+  <p>LONDON, UK. &nbsp;<a href="#">OMIJIE.E <small>DESIGN</small></a> &copy; 2022 COPYRIGHT</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

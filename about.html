@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marilyn Designs</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #111;
+      color: #fff;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header a {
+      text-decoration: none;
+    }
+
+    /* Hamburger Toggler (Mobile) */
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #f9c74f;
+    }
+
+    /* Navigation */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      color: #f9c74f;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0.3rem 0;
+    }
+
+    nav ul li a.active {
+      border-bottom: 2px solid #f9c74f;
+    }
+
+    /* Dropdown menu */
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #111;
+      min-width: 150px;
+      border-radius: 8px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+    }
+
+    nav ul li:hover > ul {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    nav ul li ul li a {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: #f9c74f;
+      font-weight: 500;
+    }
+
+    nav ul li ul li a:hover {
+      background-color: #222;
+    }
+
+    /* Sections */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    section h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    address {
+      font-style: normal;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    /* Social Media */
+    .social-links {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 400px;
+      font-size: 18px;
+    }
+
+    .social-links li a {
+      text-decoration: none;
+      color: #f9c74f;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .social-links li a:hover {
+      color: #fff200;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #f9c74f;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #111;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 0;
+      }
+
+      nav ul li {
+        width: 100%;
+      }
+
+      nav ul li a {
+        display: block;
+        padding: 1rem 2rem;
+      }
+
+      nav ul li ul {
+        position: static;
+        transform: none;
+        opacity: 1;
+        display: none;
+        background: #222;
+      }
+
+      nav ul li.open > ul {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <a href="index.html" id="head-logo-about" style="font-size:2rem; color:#fff; letter-spacing:2px;">
+      MARILYN <small style="font-weight:300; font-size:0.8rem; color:#f9c74f;">DESIGNS</small>
+    </a>
+
+    <div class="menu-toggle" id="menu-toggle"><i class="bi bi-list"></i></div>
+
+    <nav id="nav">
+      <ul id="nav-links">
+        <li><a href="index.html">HOME</a></li>
+
+        <!-- SHOP Dropdown -->
+        <li class="dropdown">
+          <a href="#">SHOP ▾</a>
+          <ul>
+            <li><a href="men.html">Men</a></li>
+            <li><a href="women.html">Women</a></li>
+            <li><a href="kids.html">Kids</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#" class="active">ABOUT US</a></li>
+
+        <!-- USER Dropdown -->
+        <li id="user-dropdown" class="dropdown">
+          <a href="#">SIGN IN ▾</a>
+          <ul></ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ADDRESS -->
+  <section style="background:#fafafa;">
+    <h3>Office Address:</h3>
+    <address>
+      28 Unity Road,<br>
+      Off Toyin Street,<br>
+      Ikeja, Lagos,<br>
+      Nigeria<br>
+      <span style="font-weight:bold;">Marilyn Design LTD.</span>
+    </address>
+  </section>
+
+  <!-- SOCIAL MEDIA -->
+  <section style="background:#fff;">
+    <ul class="social-links">
+      <li>
+        <a href="#"><i class="bi bi-instagram" style="font-size:20px;"></i> @marilyndesign</a>
+      </li>
+      <li>
+        <a href="#"><i class="bi bi-whatsapp" style="font-size:20px;"></i> +2348065057310</a>
+      </li>
+      <li>
+        <a href="#"><i class="bi bi-snapchat" style="font-size:20px;"></i> snapname</a>
+      </li>
+      <li>
+        <a href="mailto:info@marilyndesign.com"><i class="fa fa-envelope" style="font-size:20px;"></i> Email Us</a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>LONDON, UK.</p>
+    <p>
+      <a href="#">OMIJIE.E <small style="font-size:10px; color:#fff;">DESIGN</small></a> &copy; 2022 COPYRIGHT
+    </p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Hamburger menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
+    menuToggle.addEventListener('click', () => {
+      nav.style.maxHeight = nav.style.maxHeight ? null : nav.scrollHeight + "px";
+    });
+
+    // Dropdown toggle for mobile
+    document.querySelectorAll('nav ul li.dropdown > a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          const parentLi = link.parentElement;
+          parentLi.classList.toggle('open');
+        }
+      });
+    });
+
+    // User authentication dropdown
+    const user = JSON.parse(localStorage.getItem('user'));
+    const token = localStorage.getItem('token');
+    const userDropdownLink = document.querySelector('#user-dropdown > a');
+    const userDropdownMenu = document.querySelector('#user-dropdown ul');
+
+    if (token && user) {
+      const firstName = user.name?.split(' ')[0] || user.username;
+      userDropdownLink.textContent = `${user.title || ''} ${firstName} ▾`;
+      userDropdownMenu.innerHTML = `
+        <li><a href="profile.html">Profile</a></li>
+        <li><button id="signOutBtn" style="background:none;border:none;width:100%;padding:8px 12px;text-align:left;cursor:pointer;color:red;">Sign Out</button></li>
+      `;
+      const signOutBtn = userDropdownMenu.querySelector('#signOutBtn');
+      signOutBtn.addEventListener('click', () => {
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        window.location.href = 'login.html';
+      });
+    } else {
+      userDropdownLink.textContent = 'SIGN IN ▾';
+      userDropdownMenu.innerHTML = `
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+      `;
+    }
+
+    // Flip dropdown if going offscreen (desktop only)
+    document.querySelectorAll('nav ul li').forEach(li => {
+      const dropdown = li.querySelector('ul');
+      if (!dropdown) return;
+      li.addEventListener('mouseenter', () => {
+        if (window.innerWidth > 768) {
+          dropdown.style.display = 'block';
+          dropdown.style.visibility = 'hidden';
+          const rect = dropdown.getBoundingClientRect();
+          if (rect.right > window.innerWidth) {
+            dropdown.style.left = 'auto';
+            dropdown.style.right = '0';
+          } else {
+            dropdown.style.left = '0';
+            dropdown.style.right = 'auto';
+          }
+          dropdown.style.visibility = '';
+        }
+      });
+      li.addEventListener('mouseleave', () => {
+        if (window.innerWidth > 768) {
+          dropdown.style.display = '';
+          dropdown.style.left = '';
+          dropdown.style.right = '';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

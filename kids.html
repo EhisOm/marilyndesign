@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KIDS</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@300;700&family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1 id="header-logo-men"><a href="index.html">MARILYN <small>DESIGNS</small></a></h1>
+  <span id="menu-toggle">☰</span>
+  <nav id="header-menu">
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">SHOP ▾</a>
+        <div class="dropdown-content">
+          <a href="men.html">Men</a>
+          <a href="women.html">Women</a>
+          <a href="kids.html" aria-current="page">Kids</a>
+        </div>
+      </li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li><a href="cart.html" id="cart-icon">🛒 <span id="cart-count">0</span></a></li>
+      <li class="dropdown" id="accountDropdown" style="display:none;">
+        <a href="#" id="userNameDisplay">My Account ▾</a>
+        <div class="dropdown-content">
+          <a href="profile.html">Profile</a>
+          <a href="cart.html">Orders</a>
+          <a href="#" onclick="signOut()">Sign Out</a>
+        </div>
+      </li>
+      <li id="loginLinks">
+        <a href="login.html">Login</a> | <a href="register.html">Register</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main class="products-grid">
+
+  <!-- Product 1 -->
+  <figure class="product-card" data-product='{
+    "name":"Kids Clothes",
+    "price":21911.99,
+    "images":{"Blue":["images/kidscloth.png"],"Green":["images/kidsskirt.png"]},
+    "sizes":["S","M","L"]
+  }'>
+    <div class="main-img-container">
+      <img class="main-img" src="images/kidscloth.png" alt="Kids Clothes">
+    </div>
+    <div class="thumbnail-gallery">
+      <img src="images/kidscloth.png" class="selected" alt="Blue">
+      <img src="images/kidsskirt.png" alt="Green">
+    </div>
+    <div class="product-info">
+      <a href="#">Kids Clothes</a>
+      <a href="#">₦21,911.99</a>
+      <label>Color:
+        <select class="color-select">
+          <option value="Blue" selected>Blue</option>
+          <option value="Green">Green</option>
+        </select>
+      </label>
+      <label>Size:
+        <select class="size-select">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+        </select>
+      </label>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </figure>
+
+  <!-- Product 2 -->
+  <figure class="product-card" data-product='{
+    "name":"Girl Skirt",
+    "price":21121.99,
+    "images":{"Pink":["images/kidsskirt.png"],"Purple":["images/kidTopwhite.png"]},
+    "sizes":["S","M","L"]
+  }'>
+    <div class="main-img-container">
+      <img class="main-img" src="images/kidsskirt.png" alt="Girl Skirt">
+    </div>
+    <div class="thumbnail-gallery">
+      <img src="images/kidsskirt.png" class="selected" alt="Pink">
+      <img src="images/kidTopwhite.png" alt="Purple">
+    </div>
+    <div class="product-info">
+      <a href="#">Girl Skirt</a>
+      <a href="#">₦21,121.99</a>
+      <label>Color:
+        <select class="color-select">
+          <option value="Pink" selected>Pink</option>
+          <option value="Purple">Purple</option>
+        </select>
+      </label>
+      <label>Size:
+        <select class="size-select">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+        </select>
+      </label>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </figure>
+
+  <!-- Product 3 -->
+  <figure class="product-card" data-product='{
+    "name":"White Top",
+    "price":31021.99,
+    "images":{"White":["images/kidTopwhite.png"],"Pink":["images/kidsskirt.png"]},
+    "sizes":["S","M","L"]
+  }'>
+    <div class="main-img-container">
+      <img class="main-img" src="images/kidTopwhite.png" alt="White Top">
+    </div>
+    <div class="thumbnail-gallery">
+      <img src="images/kidTopwhite.png" class="selected" alt="White">
+      <img src="images/kidsskirt.png" alt="Pink">
+    </div>
+    <div class="product-info">
+      <a href="#">White Top</a>
+      <a href="#">₦31,021.99</a>
+      <label>Color:
+        <select class="color-select">
+          <option value="White" selected>White</option>
+          <option value="Pink">Pink</option>
+        </select>
+      </label>
+      <label>Size:
+        <select class="size-select">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+        </select>
+      </label>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </figure>
+
+  <!-- Product 4 -->
+  <figure class="product-card" data-product='{
+    "name":"Top and Skirt",
+    "price":41121.99,
+    "images":{"Yellow":["images/KidTop&Skirt.png"],"Blue":["images/kidscloth.png"]},
+    "sizes":["S","M","L"]
+  }'>
+    <div class="main-img-container">
+      <img class="main-img" src="images/KidTop&Skirt.png" alt="Top and Skirt">
+    </div>
+    <div class="thumbnail-gallery">
+      <img src="images/KidTop&Skirt.png" class="selected" alt="Yellow">
+      <img src="images/kidscloth.png" alt="Blue">
+    </div>
+    <div class="product-info">
+      <a href="#">Top and Skirt</a>
+      <a href="#">₦41,121.99</a>
+      <label>Color:
+        <select class="color-select">
+          <option value="Yellow" selected>Yellow</option>
+          <option value="Blue">Blue</option>
+        </select>
+      </label>
+      <label>Size:
+        <select class="size-select">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+        </select>
+      </label>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </figure>
+
+</main>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <span id="close-lightbox">&times;</span>
+  <img id="lightbox-img" src="" alt="">
+  <span id="prev">&#10094;</span>
+  <span id="next">&#10095;</span>
+</div>
+
+<footer>
+  <p>LONDON, UK. &nbsp;<a href="#">OMIJIE.E <small>DESIGN</small></a> &copy; 2022 COPYRIGHT</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

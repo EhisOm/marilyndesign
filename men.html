@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MEN</title>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@300;700&family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+  <h1 id="header-logo-men"><a href="index.html">MARILYN <small>DESIGNS</small></a></h1>
+  <span id="menu-toggle">☰</span>
+  <nav id="header-menu">
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">SHOP ▾</a>
+        <div class="dropdown-content">
+          <a href="men.html" aria-current="page">Men</a>
+          <a href="women.html">Women</a>
+          <a href="kids.html">Kids</a>
+        </div>
+      </li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li><a href="cart.html" id="cart-icon">🛒 <span id="cart-count">0</span></a></li>
+      <li class="dropdown" id="accountDropdown" style="display:none;">
+        <a href="#" id="userNameDisplay">My Account ▾</a>
+        <div class="dropdown-content">
+          <a href="profile.html">Profile</a>
+          <a href="cart.html">Orders</a>
+          <a href="#" onclick="signOut()">Sign Out</a>
+        </div>
+      </li>
+      <li id="loginLinks">
+        <a href="login.html">Login</a> | <a href="register.html">Register</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main class="products-grid">
+
+  <!-- Product 1 -->
+  <figure class="product-card" data-product='{"name":"Trouser","price":15000,"images":{"red":["images/menGin.png","images/menGinRed2.png"],"blue":["images/menGinBlue.png","images/menGinBlue2.png"]},"sizes":["S","M","L"]}'>
+    <div class="main-img-container">
+      <img class="main-img" src="images/menGin.png" alt="Trouser">
+    </div>
+    <div class="thumbnail-gallery">
+      <img src="images/menGin.png" class="selected" alt="Red 1">
+      <img src="images/menGinRed2.png" alt="Red 2">
+      <img src="images/menGinBlue.png" alt="Blue 1">
+      <img src="images/menGinBlue2.png" alt="Blue 2">
+    </div>
+    <div class="product-info">
+      <a href="#">Trouser</a>
+      <a href="#">₦15000</a>
+      <label>Color:
+        <select class="color-select">
+          <option value="red" selected>Red</option>
+          <option value="blue">Blue</option>
+        </select>
+      </label>
+      <label>Size:
+        <select class="size-select">
+          <option value="S">S</option>
+          <option value="M" selected>M</option>
+          <option value="L">L</option>
+        </select>
+      </label>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </figure>
+
+  <!-- Product 2 -->
+  <figure class="product-card" data-product='{"name":"Men White Shirt","price":25000,"images":{"white":["images/menGin1.png","images/menGin1a.png"],"black":["images/menGin1Black.png","images/menGin1Black2.png"]},"sizes":["M","L","XL"]}'>
+    <div class="main-img-container">
+      <img class="main-img" src="images/menGin1.png" alt="Men White Shirt">
+    </div>
+    <div class="thumbnail-gallery">
+      <img src="images/menGin1.png" class="selected" alt="White 1">
+      <img src="images/menGin1a.png" alt="White 2">
+      <img src="images/menGin1Black.png" alt="Black 1">
+      <img src="images/menGin1Black2.png" alt="Black 2">
+    </div>
+    <div class="product-info">
+      <a href="#"> Shirt</a>
+      <a href="#">₦25000</a>
+      <label>Color:
+        <select class="color-select">
+          <option value="white" selected>White</option>
+          <option value="black">Black</option>
+        </select>
+      </label>
+      <label>Size:
+        <select class="size-select">
+          <option value="M">M</option>
+          <option value="L" selected>L</option>
+          <option value="XL">XL</option>
+        </select>
+      </label>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </figure>
+
+  <!-- Product 3 -->
+  <figure class="product-card" data-product='{"name":"Men Black Shirt","price":18500,"images":{"black":["images/menGin2.png","images/menGin2a.png"],"gray":["images/menGin2Gray.png","images/menGin2Gray2.png"]},"sizes":["S","M","L"]}'>
+    <div class="main-img-container">
+      <img class="main-img" src="images/menGin2.png" alt="Men Black Shirt">
+    </div>
+    <div class="thumbnail-gallery">
+      <img src="images/menGin2.png" class="selected" alt="Black 1">
+      <img src="images/menGin2a.png" alt="Black 2">
+      <img src="images/menGin2Gray.png" alt="Gray 1">
+      <img src="images/menGin2Gray2.png" alt="Gray 2">
+    </div>
+    <div class="product-info">
+      <a href="#"> Shirt</a>
+      <a href="#">₦18500</a>
+      <label>Color:
+        <select class="color-select">
+          <option value="black" selected>Black</option>
+          <option value="gray">Gray</option>
+        </select>
+      </label>
+      <label>Size:
+        <select class="size-select">
+          <option value="S">S</option>
+          <option value="M" selected>M</option>
+          <option value="L">L</option>
+        </select>
+      </label>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </figure>
+
+  <!-- Product 4 -->
+  <figure class="product-card" data-product='{"name":"Men Long Shirt","price":22000,"images":{"navy":["images/menGin3.png","images/menGin3a.png"],"green":["images/menGin3Green.png","images/menGin3Green2.png"]},"sizes":["M","L","XL"]}'>
+    <div class="main-img-container">
+      <img class="main-img" src="images/menGin3.png" alt="Men Long Shirt">
+    </div>
+    <div class="thumbnail-gallery">
+      <img src="images/menGin3.png" class="selected" alt="Navy 1">
+      <img src="images/menGin3a.png" alt="Navy 2">
+      <img src="images/menGin3Green.png" alt="Green 1">
+      <img src="images/menGin3Green2.png" alt="Green 2">
+    </div>
+    <div class="product-info">
+      <a href="#">T Shirt</a>
+      <a href="#">₦22000</a>
+      <label>Color:
+        <select class="color-select">
+          <option value="navy" selected>Navy</option>
+          <option value="green">Green</option>
+        </select>
+      </label>
+      <label>Size:
+        <select class="size-select">
+          <option value="M">M</option>
+          <option value="L" selected>L</option>
+          <option value="XL">XL</option>
+        </select>
+      </label>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </figure>
+
+  <!-- Product 5 -->
+  <figure class="product-card" data-product='{"name":"Men Polo","price":15000,"images":{"white":["images/men-polo2.png","images/men-polo1.png","images/men-polo2.png"],"green":["images/men-vshirt.png","images/men-vshirt1.png","images/men-vshirt2.png"]},"sizes":["S","M","L"]}'>
+    <div class="main-img-container">
+      <img class="main-img" src="images/men-polo2.png" alt="Men Polo">
+    </div>
+    <div class="thumbnail-gallery">
+      <img src="images/men-polo2.png" class="selected" alt="White 1">
+      <img src="images/men-polo1.png" alt="White 2">
+      <img src="images/men-polo2.png" alt="White 3">
+      <img src="images/men-vshirt.png" alt="Green 1">
+      <img src="images/men-vshirt1.png" alt="Green 2">
+      <img src="images/men-vshirt2.png" alt="Green 3">
+    </div>
+    <div class="product-info">
+      <a href="#"> Polo</a>
+      <a href="#">₦15000</a>
+      <label>Color:
+        <select class="color-select">
+          <option value="white" selected>White</option>
+          <option value="green">Green</option>
+        </select>
+      </label>
+      <label>Size:
+        <select class="size-select">
+          <option value="S">S</option>
+          <option value="M" selected>M</option>
+          <option value="L">L</option>
+        </select>
+      </label>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </figure>
+
+</main>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <span id="close-lightbox">&times;</span>
+  <span id="prev">&#10094;</span>
+  <img id="lightbox-img" src="" alt="">
+  <span id="next">&#10095;</span>
+</div>
+
+<footer>
+  <p>LONDON, UK. &nbsp;<a href="#">OMIJIE.E <small>DESIGN</small></a> &copy; 2022 COPYRIGHT</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
