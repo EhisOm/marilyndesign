@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -8,63 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@300;700&family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet" />
 
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body { height: 100%; font-family: 'Raleway', sans-serif; background: #fdfdfd; color: #333; display: flex; flex-direction: column; }
-  a { text-decoration: none; color: inherit; }
-  ul { list-style: none; }
-
-  header { display: flex; justify-content: space-between; align-items: center; background: #111; color: #fff; padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; flex-wrap: wrap; }
-  #header-logo-men a { font-family: 'Montserrat', sans-serif; font-size: 2rem; color: #fff; letter-spacing: 2px; }
-  #header-logo-men small { font-weight: 300; font-size: 0.8rem; color: #f9c74f; }
-
-  #menu-toggle { display: none; font-size: 1.5rem; cursor: pointer; color: #f9c74f; }
-
-  #header-menu ul { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
-  #header-menu ul li a { color: #f9c74f; font-weight: 600; transition: 0.3s; }
-  #header-menu ul li a:hover, #header-menu ul li a[aria-current="page"] { color: #fff; border-bottom: 2px solid #f9c74f; }
-
-  .dropdown { position: relative; }
-  .dropdown-content { display: none; position: absolute; left: 0; background-color: #111; min-width: 150px; border-radius: 8px; box-shadow: 0 5px 10px rgba(0,0,0,0.3); overflow: hidden; z-index: 100; }
-  .dropdown-content a { display: block; padding: 0.5rem 1rem; color: #f9c74f; font-weight: 500; transition: 0.3s; }
-  .dropdown-content a:hover { background: #222; color: #fff; }
-  .dropdown:hover .dropdown-content { display: block; }
-
-  #cart-icon { position: relative; font-size: 1.2rem; cursor: pointer; }
-  #cart-count { position: absolute; top: -10px; right: -10px; background: #f9c74f; color: #111; font-size: 0.8rem; font-weight: bold; padding: 2px 6px; border-radius: 50%; }
-
-  main { flex: 1; }
-  .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; padding: 2rem; max-width: 1200px; margin: 0 auto; }
-  .product-card { position: relative; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; }
-  .product-card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.2); }
-  .product-card img { width: 100%; height: auto; display: block; border-radius: 12px; transition: transform 0.5s; }
-  .product-card:hover img { transform: scale(1.1); }
-
-  .product-info { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: #fff; padding: 1rem; opacity: 0; transition: opacity 0.3s; border-radius: 0 0 12px 12px; }
-  .product-card:hover .product-info { opacity: 1; }
-  .product-info a { color: #f9c74f; font-weight: 600; display: block; margin-bottom: 0.5rem; }
-  button { padding: 0.5rem 1.2rem; border: none; background: #f9c74f; color: #111; font-weight: bold; border-radius: 8px; cursor: pointer; transition: all 0.4s; }
-  button:hover { background: #e0b034; }
-
-  footer { text-align: center; background: #111; color: #fff; padding: 2rem 1rem; font-size: 0.9rem; margin-top: auto; }
-
-  /* Mobile Styles */
-  @media (max-width: 768px) {
-    #menu-toggle { display: block; }
-    #header-menu { width: 100%; display: none; }
-    #header-menu ul { flex-direction: column; gap: 1rem; padding: 1rem 0; }
-    .dropdown-content { position: relative; }
-    .dropdown:hover .dropdown-content { display: none; }
-    .dropdown.active .dropdown-content { display: block; }
-    header { padding: 1rem; }
-    .products-grid { padding: 1rem; gap: 1.5rem; }
-    .product-info { opacity: 1; position: relative; background: #111; color: #f9c74f; border-radius: 10px; margin-top: 0.5rem; padding: 0.5rem; }
-  }
-
-  @media (max-width: 480px) {
-    .products-grid { grid-template-columns: 1fr; gap: 1rem; }
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -100,326 +44,178 @@
 </header>
 
 <main class="products-grid">
-  <figure class="product-card">
-    <a href="#"><img src="images/menGin.png" alt="Men Product 1" /></a>
+
+  <!-- Product 1 -->
+  <figure class="product-card" data-product='{"name":"Trouser","price":15000,"images":{"red":["images/menGin.png","images/menGinRed2.png"],"blue":["images/menGinBlue.png","images/menGinBlue2.png"]},"sizes":["S","M","L"]}'>
+    <div class="main-img-container">
+      <img class="main-img" src="images/menGin.png" alt="Trouser">
+    </div>
+    <div class="thumbnail-gallery">
+      <img src="images/menGin.png" class="selected" alt="Red 1">
+      <img src="images/menGinRed2.png" alt="Red 2">
+      <img src="images/menGinBlue.png" alt="Blue 1">
+      <img src="images/menGinBlue2.png" alt="Blue 2">
+    </div>
     <div class="product-info">
-      <a href="#">Men Product 1</a>
+      <a href="#">Trouser</a>
       <a href="#">₦15000</a>
-      <button onclick="addToCart({name:'Men Product 1', price:15000, image:'images/mat1.jpg'})">Add to Cart</button>
+      <label>Color:
+        <select class="color-select">
+          <option value="red" selected>Red</option>
+          <option value="blue">Blue</option>
+        </select>
+      </label>
+      <label>Size:
+        <select class="size-select">
+          <option value="S">S</option>
+          <option value="M" selected>M</option>
+          <option value="L">L</option>
+        </select>
+      </label>
+      <button class="add-to-cart">Add to Cart</button>
     </div>
   </figure>
-  <figure class="product-card">
-    <a href="#"><img src="images/menGin1.png" alt="Men White Shirt" /></a>
+
+  <!-- Product 2 -->
+  <figure class="product-card" data-product='{"name":"Men White Shirt","price":25000,"images":{"white":["images/menGin1.png","images/menGin1a.png"],"black":["images/menGin1Black.png","images/menGin1Black2.png"]},"sizes":["M","L","XL"]}'>
+    <div class="main-img-container">
+      <img class="main-img" src="images/menGin1.png" alt="Men White Shirt">
+    </div>
+    <div class="thumbnail-gallery">
+      <img src="images/menGin1.png" class="selected" alt="White 1">
+      <img src="images/menGin1a.png" alt="White 2">
+      <img src="images/menGin1Black.png" alt="Black 1">
+      <img src="images/menGin1Black2.png" alt="Black 2">
+    </div>
     <div class="product-info">
-      <a href="#">Men White Shirt</a>
+      <a href="#"> Shirt</a>
       <a href="#">₦25000</a>
-      <button onclick="addToCart({name:'Men White Shirt', price:25000, image:'images/menGin2.png'})">Add to Cart</button>
+      <label>Color:
+        <select class="color-select">
+          <option value="white" selected>White</option>
+          <option value="black">Black</option>
+        </select>
+      </label>
+      <label>Size:
+        <select class="size-select">
+          <option value="M">M</option>
+          <option value="L" selected>L</option>
+          <option value="XL">XL</option>
+        </select>
+      </label>
+      <button class="add-to-cart">Add to Cart</button>
     </div>
   </figure>
-  <figure class="product-card">
-    <a href="#"><img src="images/menGin2.png" alt="Men Black Shirt" /></a>
+
+  <!-- Product 3 -->
+  <figure class="product-card" data-product='{"name":"Men Black Shirt","price":18500,"images":{"black":["images/menGin2.png","images/menGin2a.png"],"gray":["images/menGin2Gray.png","images/menGin2Gray2.png"]},"sizes":["S","M","L"]}'>
+    <div class="main-img-container">
+      <img class="main-img" src="images/menGin2.png" alt="Men Black Shirt">
+    </div>
+    <div class="thumbnail-gallery">
+      <img src="images/menGin2.png" class="selected" alt="Black 1">
+      <img src="images/menGin2a.png" alt="Black 2">
+      <img src="images/menGin2Gray.png" alt="Gray 1">
+      <img src="images/menGin2Gray2.png" alt="Gray 2">
+    </div>
     <div class="product-info">
-      <a href="#">Men Black Shirt</a>
+      <a href="#"> Shirt</a>
       <a href="#">₦18500</a>
-      <button onclick="addToCart({name:'Men Black Shirt', price:18500, image:'images/menGin2.png'})">Add to Cart</button>
+      <label>Color:
+        <select class="color-select">
+          <option value="black" selected>Black</option>
+          <option value="gray">Gray</option>
+        </select>
+      </label>
+      <label>Size:
+        <select class="size-select">
+          <option value="S">S</option>
+          <option value="M" selected>M</option>
+          <option value="L">L</option>
+        </select>
+      </label>
+      <button class="add-to-cart">Add to Cart</button>
     </div>
   </figure>
-  <figure class="product-card">
-    <a href="#"><img src="images/menGin3.png" alt="Men Long shirt" /></a>
+
+  <!-- Product 4 -->
+  <figure class="product-card" data-product='{"name":"Men Long Shirt","price":22000,"images":{"navy":["images/menGin3.png","images/menGin3a.png"],"green":["images/menGin3Green.png","images/menGin3Green2.png"]},"sizes":["M","L","XL"]}'>
+    <div class="main-img-container">
+      <img class="main-img" src="images/menGin3.png" alt="Men Long Shirt">
+    </div>
+    <div class="thumbnail-gallery">
+      <img src="images/menGin3.png" class="selected" alt="Navy 1">
+      <img src="images/menGin3a.png" alt="Navy 2">
+      <img src="images/menGin3Green.png" alt="Green 1">
+      <img src="images/menGin3Green2.png" alt="Green 2">
+    </div>
     <div class="product-info">
-      <a href="#">Men Long Shirt</a>
+      <a href="#">T Shirt</a>
       <a href="#">₦22000</a>
-      <button onclick="addToCart({name:'Men Long Shirt', price:22000, image:'images/menGin3.png'})">Add to Cart</button>
+      <label>Color:
+        <select class="color-select">
+          <option value="navy" selected>Navy</option>
+          <option value="green">Green</option>
+        </select>
+      </label>
+      <label>Size:
+        <select class="size-select">
+          <option value="M">M</option>
+          <option value="L" selected>L</option>
+          <option value="XL">XL</option>
+        </select>
+      </label>
+      <button class="add-to-cart">Add to Cart</button>
     </div>
   </figure>
+
+  <!-- Product 5 -->
+  <figure class="product-card" data-product='{"name":"Men Polo","price":15000,"images":{"white":["images/men-polo2.png","images/men-polo1.png","images/men-polo2.png"],"green":["images/men-vshirt.png","images/men-vshirt1.png","images/men-vshirt2.png"]},"sizes":["S","M","L"]}'>
+    <div class="main-img-container">
+      <img class="main-img" src="images/men-polo2.png" alt="Men Polo">
+    </div>
+    <div class="thumbnail-gallery">
+      <img src="images/men-polo2.png" class="selected" alt="White 1">
+      <img src="images/men-polo1.png" alt="White 2">
+      <img src="images/men-polo2.png" alt="White 3">
+      <img src="images/men-vshirt.png" alt="Green 1">
+      <img src="images/men-vshirt1.png" alt="Green 2">
+      <img src="images/men-vshirt2.png" alt="Green 3">
+    </div>
+    <div class="product-info">
+      <a href="#"> Polo</a>
+      <a href="#">₦15000</a>
+      <label>Color:
+        <select class="color-select">
+          <option value="white" selected>White</option>
+          <option value="green">Green</option>
+        </select>
+      </label>
+      <label>Size:
+        <select class="size-select">
+          <option value="S">S</option>
+          <option value="M" selected>M</option>
+          <option value="L">L</option>
+        </select>
+      </label>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </figure>
+
 </main>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <span id="close-lightbox">&times;</span>
+  <span id="prev">&#10094;</span>
+  <img id="lightbox-img" src="" alt="">
+  <span id="next">&#10095;</span>
+</div>
 
 <footer>
   <p>LONDON, UK. &nbsp;<a href="#">OMIJIE.E <small>DESIGN</small></a> &copy; 2022 COPYRIGHT</p>
 </footer>
 
-<script>
-  // Toggle mobile menu
-  const menuToggle = document.getElementById('menu-toggle');
-  const headerMenu = document.getElementById('header-menu');
-  menuToggle.addEventListener('click', () => {
-    headerMenu.style.display = headerMenu.style.display === 'flex' ? 'none' : 'flex';
-  });
-
-  // Dropdown toggle on mobile
-  document.querySelectorAll('.dropdown > a').forEach(drop => {
-    drop.addEventListener('click', e => {
-      if(window.innerWidth <= 768){
-        e.preventDefault();
-        drop.parentElement.classList.toggle('active');
-      }
-    });
-  });
-
-  // Cart functions
-  function updateCartCount() {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    document.getElementById('cart-count').textContent = cart.length;
-  }
-
-  function addToCart(item) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart.push({
-      name: item.name,
-      price: item.price,
-      image: item.image || 'images/placeholder.png'
-    });
-    localStorage.setItem('cart', JSON.stringify(cart));
-    updateCartCount();
-    alert(item.name + " has been added to your cart!");
-  }
-
-  function checkAuth() {
-    let userStr = localStorage.getItem('user');
-    const accountDropdown = document.getElementById('accountDropdown');
-    const loginLinks = document.getElementById('loginLinks');
-    const userNameDisplay = document.getElementById('userNameDisplay');
-
-    if (userStr) {
-      const user = JSON.parse(userStr);
-      accountDropdown.style.display = 'block';
-      loginLinks.style.display = 'none';
-      userNameDisplay.textContent = `${user.title} ${user.name} ▾`;
-    } else {
-      accountDropdown.style.display = 'none';
-      loginLinks.style.display = 'block';
-    }
-  }
-
-  function signOut() {
-    localStorage.removeItem('user');
-    alert("Signed out successfully!");
-    checkAuth();
-  }
-
-  updateCartCount();
-  checkAuth();
-</script>
-</body>
-</html> -->
-
-
-
-
-
-
-
-<!DOCTYPE html> 
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>MEN</title>
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@300;700&family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet" />
-
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body { height: 100%; font-family: 'Raleway', sans-serif; background: #fdfdfd; color: #333; display: flex; flex-direction: column; }
-  a { text-decoration: none; color: inherit; }
-  ul { list-style: none; }
-
-  header { display: flex; justify-content: space-between; align-items: center; background: #111; color: #fff; padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; flex-wrap: wrap; }
-  #header-logo-men a { font-family: 'Montserrat', sans-serif; font-size: 2rem; color: #fff; letter-spacing: 2px; }
-  #header-logo-men small { font-weight: 300; font-size: 0.8rem; color: #f9c74f; }
-
-  #menu-toggle { display: none; font-size: 1.5rem; cursor: pointer; color: #f9c74f; }
-
-  #header-menu ul { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
-  #header-menu ul li a { color: #f9c74f; font-weight: 600; transition: 0.3s; }
-  #header-menu ul li a:hover, #header-menu ul li a[aria-current="page"] { color: #fff; border-bottom: 2px solid #f9c74f; }
-
-  .dropdown { position: relative; }
-  .dropdown-content { display: none; position: absolute; left: 0; background-color: #111; min-width: 150px; border-radius: 8px; box-shadow: 0 5px 10px rgba(0,0,0,0.3); overflow: hidden; z-index: 100; }
-  .dropdown-content a { display: block; padding: 0.5rem 1rem; color: #f9c74f; font-weight: 500; transition: 0.3s; }
-  .dropdown-content a:hover { background: #222; color: #fff; }
-  .dropdown:hover .dropdown-content { display: block; }
-
-  #cart-icon { position: relative; font-size: 1.2rem; cursor: pointer; }
-  #cart-count { position: absolute; top: -10px; right: -10px; background: #f9c74f; color: #111; font-size: 0.8rem; font-weight: bold; padding: 2px 6px; border-radius: 50%; }
-
-  main { flex: 1; }
-  .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; padding: 2rem; max-width: 1200px; margin: 0 auto; }
-  .product-card { position: relative; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; }
-  .product-card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.2); }
-  .product-card img { width: 100%; height: auto; display: block; border-radius: 12px; transition: transform 0.5s; }
-  .product-card:hover img { transform: scale(1.1); }
-
-  .product-info { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: #fff; padding: 1rem; opacity: 0; transition: opacity 0.3s; border-radius: 0 0 12px 12px; }
-  .product-card:hover .product-info { opacity: 1; }
-  .product-info a { color: #f9c74f; font-weight: 600; display: block; margin-bottom: 0.5rem; }
-  button { padding: 0.5rem 1.2rem; border: none; background: #f9c74f; color: #111; font-weight: bold; border-radius: 8px; cursor: pointer; transition: all 0.4s; }
-  button:hover { background: #e0b034; }
-
-  footer { text-align: center; background: #111; color: #fff; padding: 2rem 1rem; font-size: 0.9rem; margin-top: auto; }
-
-  /* MOBILE STYLES */
-  @media (max-width: 768px) {
-    #menu-toggle { display: block; }
-    #header-menu { width: 100%; display: none; }
-    #header-menu ul { flex-direction: column; gap: 1rem; padding: 1rem 0; }
-    .dropdown-content { position: relative; }
-    .dropdown:hover .dropdown-content { display: none; }
-    .dropdown.active .dropdown-content { display: block; }
-    header { padding: 1rem; }
-
-    /* Products Grid Mobile */
-    .products-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-      padding: 1rem;
-    }
-    .product-card img {
-      max-height: 150px;
-      object-fit: cover;
-    }
-    .product-info { opacity: 1; position: relative; background: #111; color: #f9c74f; border-radius: 10px; margin-top: 0.5rem; padding: 0.5rem; }
-  }
-
-  @media (max-width: 480px) {
-    .products-grid { grid-template-columns: 1fr; gap: 1rem; }
-  }
-</style>
-</head>
-
-<body>
-<header>
-  <h1 id="header-logo-men"><a href="index.html">MARILYN <small>DESIGNS</small></a></h1>
-  <span id="menu-toggle">☰</span>
-  <nav id="header-menu">
-    <ul>
-      <li><a href="index.html">HOME</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropbtn">SHOP ▾</a>
-        <div class="dropdown-content">
-          <a href="men.html" aria-current="page">Men</a>
-          <a href="women.html">Women</a>
-          <a href="kids.html">Kids</a>
-        </div>
-      </li>
-      <li><a href="about.html">ABOUT US</a></li>
-      <li><a href="cart.html" id="cart-icon">🛒 <span id="cart-count">0</span></a></li>
-      <li class="dropdown" id="accountDropdown" style="display:none;">
-        <a href="#" id="userNameDisplay">My Account ▾</a>
-        <div class="dropdown-content">
-          <a href="profile.html">Profile</a>
-          <a href="cart.html">Orders</a>
-          <a href="#" onclick="signOut()">Sign Out</a>
-        </div>
-      </li>
-      <li id="loginLinks">
-        <a href="login.html">Login</a> | <a href="register.html">Register</a>
-      </li>
-    </ul>
-  </nav>
-</header>
-
-<main class="products-grid">
-  <figure class="product-card">
-    <a href="#"><img src="images/menGin.png" alt="Men Product 1" /></a>
-    <div class="product-info">
-      <a href="#">Men Product 1</a>
-      <a href="#">₦15000</a>
-      <button onclick="addToCart({name:'Men Product 1', price:15000, image:'images/mat1.jpg'})">Add to Cart</button>
-    </div>
-  </figure>
-  <figure class="product-card">
-    <a href="#"><img src="images/menGin1.png" alt="Men White Shirt" /></a>
-    <div class="product-info">
-      <a href="#">Men White Shirt</a>
-      <a href="#">₦25000</a>
-      <button onclick="addToCart({name:'Men White Shirt', price:25000, image:'images/menGin2.png'})">Add to Cart</button>
-    </div>
-  </figure>
-  <figure class="product-card">
-    <a href="#"><img src="images/menGin2.png" alt="Men Black Shirt" /></a>
-    <div class="product-info">
-      <a href="#">Men Black Shirt</a>
-      <a href="#">₦18500</a>
-      <button onclick="addToCart({name:'Men Black Shirt', price:18500, image:'images/menGin2.png'})">Add to Cart</button>
-    </div>
-  </figure>
-  <figure class="product-card">
-    <a href="#"><img src="images/menGin3.png" alt="Men Long shirt" /></a>
-    <div class="product-info">
-      <a href="#">Men Long Shirt</a>
-      <a href="#">₦22000</a>
-      <button onclick="addToCart({name:'Men Long Shirt', price:22000, image:'images/menGin3.png'})">Add to Cart</button>
-    </div>
-  </figure>
-</main>
-
-<footer>
-  <p>LONDON, UK. &nbsp;<a href="#">OMIJIE.E <small>DESIGN</small></a> &copy; 2022 COPYRIGHT</p>
-</footer>
-
-<script>
-  // Toggle mobile menu
-  const menuToggle = document.getElementById('menu-toggle');
-  const headerMenu = document.getElementById('header-menu');
-  menuToggle.addEventListener('click', () => {
-    headerMenu.style.display = headerMenu.style.display === 'flex' ? 'none' : 'flex';
-  });
-
-  // Dropdown toggle on mobile
-  document.querySelectorAll('.dropdown > a').forEach(drop => {
-    drop.addEventListener('click', e => {
-      if(window.innerWidth <= 768){
-        e.preventDefault();
-        drop.parentElement.classList.toggle('active');
-      }
-    });
-  });
-
-  // Cart functions
-  function updateCartCount() {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    document.getElementById('cart-count').textContent = cart.length;
-  }
-
-  function addToCart(item) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart.push({
-      name: item.name,
-      price: item.price,
-      image: item.image || 'images/placeholder.png'
-    });
-    localStorage.setItem('cart', JSON.stringify(cart));
-    updateCartCount();
-    alert(item.name + " has been added to your cart!");
-  }
-
-  function checkAuth() {
-    let userStr = localStorage.getItem('user');
-    const accountDropdown = document.getElementById('accountDropdown');
-    const loginLinks = document.getElementById('loginLinks');
-    const userNameDisplay = document.getElementById('userNameDisplay');
-
-    if (userStr) {
-      const user = JSON.parse(userStr);
-      accountDropdown.style.display = 'block';
-      loginLinks.style.display = 'none';
-      userNameDisplay.textContent = `${user.title} ${user.name} ▾`;
-    } else {
-      accountDropdown.style.display = 'none';
-      loginLinks.style.display = 'block';
-    }
-  }
-
-  function signOut() {
-    localStorage.removeItem('user');
-    alert("Signed out successfully!");
-    checkAuth();
-  }
-
-  updateCartCount();
-  checkAuth();
-</script>
+<script src="script.js"></script>
 </body>
 </html>

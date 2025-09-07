@@ -1,77 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>KIDS</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KIDS</title>
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@300;700&family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@300;700&family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet" />
 
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body { height: 100%; font-family: 'Raleway', sans-serif; background: #fdfdfd; color: #333; display: flex; flex-direction: column; }
-  a { text-decoration: none; color: inherit; }
-  ul { list-style: none; }
-
-  /* HEADER */
-  header { display: flex; justify-content: space-between; align-items: center; background: #111; color: #fff; padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; flex-wrap: wrap; }
-  #header-logo-men a { font-family: 'Montserrat', sans-serif; font-size: 2rem; color: #fff; letter-spacing: 2px; }
-  #header-logo-men small { font-weight: 300; font-size: 0.8rem; color: #f9c74f; }
-  #header-menu { display: flex; align-items: center; }
-  #header-menu ul { display: flex; gap: 1.5rem; align-items: center; }
-  #header-menu ul li a { color: #f9c74f; font-weight: 600; transition: 0.3s; }
-  #header-menu ul li a:hover, #header-menu ul li a[aria-current="page"] { color: #fff; border-bottom: 2px solid #f9c74f; }
-
-  /* DROPDOWN */
-  .dropdown { position: relative; }
-  .dropdown-content { display: none; position: absolute; left: 0; background-color: #111; min-width: 150px; border-radius: 8px; box-shadow: 0 5px 10px rgba(0,0,0,0.3); overflow: hidden; z-index: 100; }
-  .dropdown-content a { display: block; padding: 0.5rem 1rem; color: #f9c74f; font-weight: 500; transition: 0.3s; }
-  .dropdown-content a:hover { background: #222; color: #fff; }
-  .dropdown:hover .dropdown-content { display: block; }
-
-  /* CART ICON */
-  #cart-icon { position: relative; font-size: 1.2rem; cursor: pointer; }
-  #cart-count { position: absolute; top: -10px; right: -10px; background: #f9c74f; color: #111; font-size: 0.8rem; font-weight: bold; padding: 2px 6px; border-radius: 50%; }
-
-  /* TOGGLER */
-  #menu-toggle { display: none; font-size: 1.8rem; cursor: pointer; color: #f9c74f; }
-
-  /* MAIN GRID */
-  main { flex: 1; }
-  .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; padding: 2rem; max-width: 1200px; margin: 0 auto; }
-  .product-card { position: relative; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; }
-  .product-card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.2); }
-  .product-card img { width: 100%; height: auto; display: block; border-radius: 12px; transition: transform 0.5s; }
-  .product-card:hover img { transform: scale(1.1); }
-
-  .product-info { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: #fff; padding: 1rem; opacity: 0; transition: opacity 0.3s; border-radius: 0 0 12px 12px; }
-  .product-card:hover .product-info { opacity: 1; }
-  .product-info a { color: #f9c74f; font-weight: 600; display: block; margin-bottom: 0.5rem; }
-  button { padding: 0.5rem 1.2rem; border: none; background: #f9c74f; color: #111; font-weight: bold; border-radius: 8px; cursor: pointer; transition: all 0.4s; }
-  button:hover { background: #e0b034; }
-
-  /* FOOTER */
-  footer { text-align: center; background: #111; color: #fff; padding: 2rem 1rem; font-size: 0.9rem; margin-top: auto; }
-
-  /* RESPONSIVE */
-  @media (max-width: 1024px) {
-    .products-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (max-width: 768px) {
-    header { flex-direction: row; justify-content: space-between; align-items: center; }
-    #menu-toggle { display: block; }
-    #header-menu { display: none; width: 100%; }
-    #header-menu ul { flex-direction: column; gap: 0.8rem; padding: 1rem 0; background: #111; border-radius: 8px; }
-    .product-info { opacity: 1; position: relative; background: #111; color: #f9c74f; border-radius: 10px; margin-top: 0.5rem; padding: 0.5rem; }
-  }
-  @media (max-width: 480px) {
-    .products-grid { grid-template-columns: 1fr; gap: 1rem; }
-    header { padding: 1rem; }
-  }
-</style>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 <header>
   <h1 id="header-logo-men"><a href="index.html">MARILYN <small>DESIGNS</small></a></h1>
@@ -80,7 +18,7 @@
     <ul>
       <li><a href="index.html">HOME</a></li>
       <li class="dropdown">
-        <a href="#">SHOP ▾</a>
+        <a href="#" class="dropbtn">SHOP ▾</a>
         <div class="dropdown-content">
           <a href="men.html">Men</a>
           <a href="women.html">Women</a>
@@ -105,94 +43,157 @@
 </header>
 
 <main class="products-grid">
-  <figure class="product-card">
-    <a href="#"><img src="images/kidscloth.png" alt="Kid Clothes" /></a>
+
+  <!-- Product 1 -->
+  <figure class="product-card" data-product='{
+    "name":"Kids Clothes",
+    "price":21911.99,
+    "images":{"Blue":["images/kidscloth.png"],"Green":["images/kidsskirt.png"]},
+    "sizes":["S","M","L"]
+  }'>
+    <div class="main-img-container">
+      <img class="main-img" src="images/kidscloth.png" alt="Kids Clothes">
+    </div>
+    <div class="thumbnail-gallery">
+      <img src="images/kidscloth.png" class="selected" alt="Blue">
+      <img src="images/kidsskirt.png" alt="Green">
+    </div>
     <div class="product-info">
       <a href="#">Kids Clothes</a>
       <a href="#">₦21,911.99</a>
-      <button onclick="addToCart({name:'Kids Clothes', price:21911.99, image:'images/kidscloth.png'})">Add to Cart</button>
+      <label>Color:
+        <select class="color-select">
+          <option value="Blue" selected>Blue</option>
+          <option value="Green">Green</option>
+        </select>
+      </label>
+      <label>Size:
+        <select class="size-select">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+        </select>
+      </label>
+      <button class="add-to-cart">Add to Cart</button>
     </div>
   </figure>
-  <figure class="product-card">
-    <a href="#"><img src="images/kidsskirt.png" alt="Girl Skirt" /></a>
+
+  <!-- Product 2 -->
+  <figure class="product-card" data-product='{
+    "name":"Girl Skirt",
+    "price":21121.99,
+    "images":{"Pink":["images/kidsskirt.png"],"Purple":["images/kidTopwhite.png"]},
+    "sizes":["S","M","L"]
+  }'>
+    <div class="main-img-container">
+      <img class="main-img" src="images/kidsskirt.png" alt="Girl Skirt">
+    </div>
+    <div class="thumbnail-gallery">
+      <img src="images/kidsskirt.png" class="selected" alt="Pink">
+      <img src="images/kidTopwhite.png" alt="Purple">
+    </div>
     <div class="product-info">
       <a href="#">Girl Skirt</a>
       <a href="#">₦21,121.99</a>
-      <button onclick="addToCart({name:'Girl Skirt', price:21121.99, image:'images/kidsskirt.jpg'})">Add to Cart</button>
+      <label>Color:
+        <select class="color-select">
+          <option value="Pink" selected>Pink</option>
+          <option value="Purple">Purple</option>
+        </select>
+      </label>
+      <label>Size:
+        <select class="size-select">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+        </select>
+      </label>
+      <button class="add-to-cart">Add to Cart</button>
     </div>
   </figure>
-  <figure class="product-card">
-    <a href="#"><img src="images/kidTopwhite.png" alt="White Top" /></a>
+
+  <!-- Product 3 -->
+  <figure class="product-card" data-product='{
+    "name":"White Top",
+    "price":31021.99,
+    "images":{"White":["images/kidTopwhite.png"],"Pink":["images/kidsskirt.png"]},
+    "sizes":["S","M","L"]
+  }'>
+    <div class="main-img-container">
+      <img class="main-img" src="images/kidTopwhite.png" alt="White Top">
+    </div>
+    <div class="thumbnail-gallery">
+      <img src="images/kidTopwhite.png" class="selected" alt="White">
+      <img src="images/kidsskirt.png" alt="Pink">
+    </div>
     <div class="product-info">
       <a href="#">White Top</a>
       <a href="#">₦31,021.99</a>
-      <button onclick="addToCart({name:'White Top', price:31021.99, image:'images/kidTopwhite.png'})">Add to Cart</button>
+      <label>Color:
+        <select class="color-select">
+          <option value="White" selected>White</option>
+          <option value="Pink">Pink</option>
+        </select>
+      </label>
+      <label>Size:
+        <select class="size-select">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+        </select>
+      </label>
+      <button class="add-to-cart">Add to Cart</button>
     </div>
   </figure>
-  <figure class="product-card">
-    <a href="#"><img src="images/KidTop&Skirt.png" alt="Top and Skirt" /></a>
+
+  <!-- Product 4 -->
+  <figure class="product-card" data-product='{
+    "name":"Top and Skirt",
+    "price":41121.99,
+    "images":{"Yellow":["images/KidTop&Skirt.png"],"Blue":["images/kidscloth.png"]},
+    "sizes":["S","M","L"]
+  }'>
+    <div class="main-img-container">
+      <img class="main-img" src="images/KidTop&Skirt.png" alt="Top and Skirt">
+    </div>
+    <div class="thumbnail-gallery">
+      <img src="images/KidTop&Skirt.png" class="selected" alt="Yellow">
+      <img src="images/kidscloth.png" alt="Blue">
+    </div>
     <div class="product-info">
       <a href="#">Top and Skirt</a>
       <a href="#">₦41,121.99</a>
-      <button onclick="addToCart({name:'Top and Skirt', price:41121.99, image:'images/KidTop&Skirt.png'})">Add to Cart</button>
+      <label>Color:
+        <select class="color-select">
+          <option value="Yellow" selected>Yellow</option>
+          <option value="Blue">Blue</option>
+        </select>
+      </label>
+      <label>Size:
+        <select class="size-select">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+        </select>
+      </label>
+      <button class="add-to-cart">Add to Cart</button>
     </div>
   </figure>
+
 </main>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <span id="close-lightbox">&times;</span>
+  <img id="lightbox-img" src="" alt="">
+  <span id="prev">&#10094;</span>
+  <span id="next">&#10095;</span>
+</div>
 
 <footer>
   <p>LONDON, UK. &nbsp;<a href="#">OMIJIE.E <small>DESIGN</small></a> &copy; 2022 COPYRIGHT</p>
 </footer>
 
-<script>
-  function updateCartCount() {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    document.getElementById('cart-count').textContent = cart.length;
-  }
-
-  function addToCart(item) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart.push({
-      name: item.name,
-      price: item.price,
-      image: item.image || 'images/placeholder.png'
-    });
-    localStorage.setItem('cart', JSON.stringify(cart));
-    updateCartCount();
-    alert(item.name + " has been added to your cart!");
-  }
-
-  function checkAuth() {
-    let userStr = localStorage.getItem('user');
-    const accountDropdown = document.getElementById('accountDropdown');
-    const loginLinks = document.getElementById('loginLinks');
-    const userNameDisplay = document.getElementById('userNameDisplay');
-
-    if (userStr) {
-      const user = JSON.parse(userStr);
-      accountDropdown.style.display = 'block';
-      loginLinks.style.display = 'none';
-      userNameDisplay.textContent = `${user.title} ${user.name} ▾`;
-    } else {
-      accountDropdown.style.display = 'none';
-      loginLinks.style.display = 'block';
-    }
-  }
-
-  function signOut() {
-    localStorage.removeItem('user');
-    alert("Signed out successfully!");
-    checkAuth();
-  }
-
-  // Menu toggler
-  const menuToggle = document.getElementById('menu-toggle');
-  const headerMenu = document.getElementById('header-menu');
-  menuToggle.addEventListener('click', () => {
-    headerMenu.style.display = headerMenu.style.display === 'flex' ? 'none' : 'flex';
-  });
-
-  updateCartCount();
-  checkAuth();
-</script>
+<script src="script.js"></script>
 </body>
 </html>
